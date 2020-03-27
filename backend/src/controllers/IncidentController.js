@@ -14,7 +14,7 @@ module.exports = {
       const incidents = await connection('incidents')
          // relacionando dados entre as tabelas incidents e ongs
          // comparar o id da tabela ong com id da ong na tabela incidents e trazer os resultados
-         .join('ongs', 'ong_id', "=", 'incidents.ong_id')
+         .join('ongs', 'ongs.id', "=", 'incidents.ong_id')
          // limitar a quantidade de registros de incidentes em cinco
          .limit(5)
          // calculo para iniciar no registro zero e pular de cinco em cinco em cada paginação
