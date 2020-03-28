@@ -38,6 +38,10 @@ export default function NewIncident() {
     }
   }
 
+  function handleCancelIncident() {
+    history.push('/profile');
+  }
+
   return (
     <div className="new-incident-container">
       <div className="content">
@@ -71,8 +75,10 @@ export default function NewIncident() {
             value={value}
             onChange={e => setValue(e.target.value)}
           />
-
-          <button className="button" type="submit">Cadastrar</button>
+          <div className="group-button">
+            <button onClick={handleCancelIncident} className="buttonCancel" type="reset">Cancelar</button>
+            <button className="button" type="submit">Cadastrar</button>
+          </div>
         </form>
       </div>
     </div>
