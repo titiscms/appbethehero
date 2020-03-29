@@ -1,4 +1,4 @@
-const crypto = require('crypto');
+const generateUniqueId = require('../utils/generateUniqueId');
 const connection = require('../database/connection');
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
       const { name, email, whatsapp, city, uf } = request.body;
 
       // usando o crypto para gerar um valor aleatório numa string no formato hexadecimal
-      const id = crypto.randomBytes(4).toString('HEX');
+      const id = generateUniqueId();
 
       // conectando no banco e passando a tabela e as colunas que vão ser inseridas o dados
       // colocando o await, o codigo vai aguardar finalizar o insert para depois continuar

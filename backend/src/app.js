@@ -15,4 +15,4 @@ app.use(routes);
 // com esse erros importado do celebrate, a aplicação irá saber como lidar com algum erro proviniente da validação.
 app.use(errors());
 
-app.listen(3333);
+module.exports = app;
