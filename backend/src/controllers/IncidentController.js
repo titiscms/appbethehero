@@ -66,7 +66,7 @@ module.exports = {
          .select('ong_id')
          .first();
 
-      // fazer verificação se o ong_id é diferente do ong_id conectado   
+      // fazer verificação se o ong_id é diferente do ong_id conectado 
       if(incident.ong_id !== ong_id) {
          // se for diferente mudar status para 401 não autorizado
          return response.status(401).json({ error: 'Operation not permitted' });
